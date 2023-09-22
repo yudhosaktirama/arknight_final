@@ -65,3 +65,12 @@ class OperatorClass {
     required this.namaClass,
   });
 }
+
+class OperatorTierlistSelection {
+  String tier;
+  String deskripsi;
+  String gambar;
+
+  OperatorTierlistSelection(
+      {required this.deskripsi, required this.gambar, required this.tier});
+}

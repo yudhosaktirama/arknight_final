@@ -1,4 +1,6 @@
+import 'package:arknight_library/model/listmodel.dart';
 import 'package:arknight_library/page/OperatorDetail.dart';
+import 'package:arknight_library/page/tierlistPage/OperatorTierlistDetail.dart';
 import 'package:flutter/material.dart';
 
 class TierListPage extends StatelessWidget {
@@ -32,6 +34,7 @@ class TierListPage extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.9,
                 height: MediaQuery.of(context).size.height * 0.9,
                 child: ListView.builder(
+                  itemCount: ListItem().operatorTierListSelection.length,
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -47,7 +50,10 @@ class TierListPage extends StatelessWidget {
                               color: Colors.white,
                               child: Center(
                                 child: Text(
-                                  "Tier 0",
+                                  "Tier " +
+                                      ListItem()
+                                          .operatorTierListSelection[index]
+                                          .tier,
                                   style: TextStyle(
                                       color: Colors.black, fontSize: 20),
                                 ),
@@ -62,8 +68,9 @@ class TierListPage extends StatelessWidget {
                                       MediaQuery.of(context).size.height * 0.23,
                                   decoration: BoxDecoration(
                                       image: DecorationImage(
-                                          image: NetworkImage(
-                                              "https://s4.bukalapak.com/bukalapak-kontenz-production/content_attachments/77364/original/Game_Arknights_4.jpg"),
+                                          image: NetworkImage(ListItem()
+                                              .operatorTierListSelection[index]
+                                              .gambar),
                                           fit: BoxFit.fill)),
                                 ),
                                 Container(
@@ -73,10 +80,15 @@ class TierListPage extends StatelessWidget {
                                       MediaQuery.of(context).size.height * 0.23,
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: Text(
-                                      "Operator tier 0 merupakan operator yang memiliki kemampuan diatas rata-rata dibandingkan dengan operator lain",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 18),
+                                    child: SingleChildScrollView(
+                                      scrollDirection: Axis.vertical,
+                                      child: Text(
+                                        ListItem()
+                                            .operatorTierListSelection[index]
+                                            .deskripsi,
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 18),
+                                      ),
                                     ),
                                   ),
                                 )
@@ -86,7 +98,7 @@ class TierListPage extends StatelessWidget {
                               child: Container(
                                 child: ElevatedButton(
                                     style: ButtonStyle(
-                                      elevation: MaterialStatePropertyAll(10),
+                                        elevation: MaterialStatePropertyAll(10),
                                         backgroundColor:
                                             MaterialStatePropertyAll(
                                                 Colors.black),
@@ -104,7 +116,18 @@ class TierListPage extends StatelessWidget {
                                             RoundedRectangleBorder(
                                                 borderRadius: BorderRadius.all(
                                                     Radius.circular(7))))),
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(context, MaterialPageRoute(
+                                        builder: (context) {
+                                          return OperatorTierLIstDetailPage(
+                                            tier: ListItem()
+                                                .operatorTierListSelection[
+                                                    index]
+                                                .tier,
+                                          );
+                                        },
+                                      ));
+                                    },
                                     child: Text(
                                       "Lihat Detail Operator",
                                       style: TextStyle(
@@ -138,48 +161,33 @@ class OperatorTierListWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          width: MediaQuery.of(context).size.width * 0.94,
-          height: MediaQuery.of(context).size.height * 0.6,
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
           color: Color.fromRGBO(38, 33, 33, 1),
           child: Column(
             children: [
-              Row(
-                children: [
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.25,
-                    height: MediaQuery.of(context).size.height * 0.05,
-                    color: Colors.black,
-                    child: Center(
-                      child: Text(
-                        "Tier 0",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
               Expanded(
                   child: Container(
-                color: Colors.grey,
+                color: Colors.black,
                 child: GridView.builder(
                   addAutomaticKeepAlives: false,
                   primary: false,
                   itemCount: 12,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       childAspectRatio: MediaQuery.of(context).size.width /
-                          (MediaQuery.of(context).size.height / 1.2),
+                          (MediaQuery.of(context).size.height / 1.4),
                       crossAxisCount: 3),
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
-                        width: MediaQuery.of(context).size.width * 0.2,
+                        width: MediaQuery.of(context).size.width * 0.23,
                         height: MediaQuery.of(context).size.height * 0.4,
-                        color: Colors.black,
+                        color: Color.fromRGBO(98, 116, 156, 1),
                         child: Column(
                           children: [
                             Container(
-                              width: MediaQuery.of(context).size.width * 0.274,
+                              width: MediaQuery.of(context).size.width * 0.3,
                               height: MediaQuery.of(context).size.height * 0.1,
                               decoration: BoxDecoration(
                                   image: DecorationImage(
@@ -200,9 +208,9 @@ class OperatorTierListWidget extends StatelessWidget {
                               )),
                             ),
                             Container(
-                              width: MediaQuery.of(context).size.width * 0.274,
+                              width: MediaQuery.of(context).size.width * 0.3,
                               height: MediaQuery.of(context).size.height * 0.03,
-                              color: Colors.black,
+                              color: Color.fromRGBO(98, 116, 156, 1),
                               child: Center(
                                 child: SingleChildScrollView(
                                   scrollDirection: Axis.horizontal,
@@ -214,9 +222,9 @@ class OperatorTierListWidget extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              width: MediaQuery.of(context).size.width * 0.274,
+                              width: MediaQuery.of(context).size.width * 0.3,
                               height: MediaQuery.of(context).size.height * 0.03,
-                              color: Colors.black,
+                              color: Color.fromRGBO(98, 116, 156, 1),
                               child: Center(
                                 child: SingleChildScrollView(
                                   scrollDirection: Axis.horizontal,

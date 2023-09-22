@@ -68,4 +68,11 @@ class ListItem {
             'https://raw.githubusercontent.com/Aceship/Arknight-Images/main/classes/class_vanguard.png',
         namaClass: "Vanguard")
   ];
+
+  List<OperatorTierlistSelection> operatorTierListSelection = [
+    OperatorTierlistSelection(deskripsi: "These are the best operators in Arknights in the current meta. They are overpowered and pretty much good at clearing any content. You should invest in these characters as soon as possible.", gambar: "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/429b6b9b-c1b3-4e54-74d1-dc51e5c23100/width=1200/429b6b9b-c1b3-4e54-74d1-dc51e5c23100.jpeg", tier: "0"),
+    OperatorTierlistSelection(deskripsi: "These are also excellent Arknights characters. While not as powerful as the S-tier ones, they are still able to clear most content easily.", gambar: "https://images.alphacoders.com/128/1289111.jpg", tier: "1"),
+    OperatorTierlistSelection(deskripsi: "Not great, not bad also. Play with them only if you don’t have anything else to substitute within your team.", gambar: "https://i.pinimg.com/736x/c2/7d/3e/c27d3e5ee644f6900d6f87e5fbf47a76.jpg", tier: "2"),
+    OperatorTierlistSelection(deskripsi: "Not really worth investing in these Arknights heroes, unless you literally have nothing else, and even then you should save your resources for other characters.", gambar: "https://images.alphacoders.com/128/1287199.jpg", tier: "3"),
+  ];
 }
