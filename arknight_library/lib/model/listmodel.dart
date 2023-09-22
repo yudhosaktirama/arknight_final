@@ -103,7 +103,7 @@ class ListItem {
           "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/28.png",
           "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/27.png"
         ],
-        tier: "Tier 1"),
+        tier: "1"),
     MaterialSelection(
         deskripsi: "Material Tier 2 ini masih tergolong mudah untuk didapatkan",
         gambar: [
@@ -112,7 +112,7 @@ class ListItem {
           "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/22.png",
           "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/21.png"
         ],
-        tier: "Tier 2"),
+        tier: "2"),
     MaterialSelection(
         deskripsi:
             "Material Tier 3 ini sudah tergolong susah untuk didapatkan melalui stage kecuali pada stage event atau stage atas",
@@ -122,7 +122,7 @@ class ListItem {
           "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/61.png",
           "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/34.png"
         ],
-        tier: "Tier 3"),
+        tier: "3"),
     MaterialSelection(
         deskripsi:
             "Material Tier 4 ini hampir mustahil untuk didapatkan melalui stage biasa,craft menjadi solusi untuk mendapatkan material ini mudah",
@@ -132,7 +132,7 @@ class ListItem {
           "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/7.png",
           "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/6.png"
         ],
-        tier: "Tier 4"),
+        tier: "4"),
     MaterialSelection(
         deskripsi:
             "Material Tier 5 ini hanya bisa didapatkan melalui craft saja",
@@ -142,6 +142,6 @@ class ListItem {
           "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/2.png",
           "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/65.png"
         ],
-        tier: "Tier 5")
+        tier: "5")
   ];
 }
