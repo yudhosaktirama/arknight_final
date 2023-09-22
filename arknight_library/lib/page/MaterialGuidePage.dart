@@ -1,3 +1,4 @@
+import 'package:arknight_library/model/listmodel.dart';
 import 'package:arknight_library/widget/DoubleTitleIconWidget.dart';
 import 'package:arknight_library/widget/ProfileWidget.dart';
 import 'package:flutter/material.dart';
@@ -10,38 +11,147 @@ class MaterialGuidePage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          title: Text("Material Farming Guide Group"),
+          centerTitle: true,
+          leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(Icons.arrow_back_ios)),
+        ),
         backgroundColor: Color.fromRGBO(38, 33, 33, 1),
-        body: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.038,
-              ),
-              ProfileWidget(),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.038,
-              ),
-              DoubleIconAndTitleWidget(
-                  gambar: "assets/mostima.png",
-                  judul: "Material farming Guide"),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.038,
-              ),
-              MaterialFarmingBuildWidget(),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.038,
-              ),
-              MaterialFarmingBuildWidget(),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.038,
-              ),
-              MaterialFarmingBuildWidget(),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.038,
-              ),
-              MaterialFarmingBuildWidget()
-            ],
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            color: Color.fromRGBO(38, 33, 33, 1),
+            child: ListView.builder(
+              itemCount: ListItem().materialselection.length,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height * 0.4,
+                    color: Colors.black,
+                    child: Column(
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width,
+                          height: MediaQuery.of(context).size.height * 0.04,
+                          color: Colors.black,
+                          child: Center(
+                            child: Text(ListItem().materialselection[index].tier,style: TextStyle(
+                               fontWeight: FontWeight.w500,
+                               fontSize: 20,
+                               color: Colors.white
+                            ),),
+
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.46,
+                            height: MediaQuery.of(context).size.height * 0.29,
+                            color: Colors.black,
+                            child: Stack(
+                              children: [
+                                Positioned(
+                                  top: 0,
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width * 0.23,
+                                    height: MediaQuery.of(context).size.height * 0.15,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(image: NetworkImage(ListItem().materialselection[index].gambar[0]))
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 0,
+                                  right: 0,
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width * 0.23,
+                                    height: MediaQuery.of(context).size.height * 0.15,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(image: NetworkImage(ListItem().materialselection[index].gambar[1]))
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 0,
+                                  left: 0,
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width * 0.23,
+                                    height: MediaQuery.of(context).size.height * 0.15,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(image: NetworkImage(ListItem().materialselection[index].gambar[2]))
+                                    ),
+                                  ),
+                                ),
+                                 Positioned(
+                                  right: 0,
+                                  top: 0,
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width * 0.23,
+                                    height: MediaQuery.of(context).size.height * 0.15,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(image: NetworkImage(ListItem().materialselection[index].gambar[3]))
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.45,
+                            height: MediaQuery.of(context).size.height * 0.29,
+                            color: Colors.black,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: SingleChildScrollView(
+                                scrollDirection: Axis.vertical,
+                                child: Text(ListItem().materialselection[index].deskripsi,style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20
+                                ),),
+                              ),
+                            ),
+                          )
+                        ],),
+                        Expanded(child: Container(
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll(Colors.black),
+                              shape: MaterialStatePropertyAll(
+                                RoundedRectangleBorder(borderRadius:BorderRadius.all(Radius.circular(21)) )),
+                              fixedSize: MaterialStatePropertyAll(Size(MediaQuery.of(context).size.width, MediaQuery.of(context).size.height * 0.01))
+                            ),
+                            onPressed: (){}, 
+                          child: Text("Lihat Detail List Material",style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20
+                          ),)),
+                        ))
+                      ],
+                    ),
+                  ),
+                );
+              },
+            ),
           ),
         ),
       ),

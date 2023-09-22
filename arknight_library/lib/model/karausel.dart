@@ -74,3 +74,14 @@ class OperatorTierlistSelection {
   OperatorTierlistSelection(
       {required this.deskripsi, required this.gambar, required this.tier});
 }
+
+class MaterialSelection {
+  String tier;
+  List<String> gambar;
+  String deskripsi;
+
+  MaterialSelection({
+    required this.deskripsi,required this.gambar,
+    required this.tier
+  });
+}

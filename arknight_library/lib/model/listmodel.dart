@@ -70,9 +70,78 @@ class ListItem {
   ];
 
   List<OperatorTierlistSelection> operatorTierListSelection = [
-    OperatorTierlistSelection(deskripsi: "These are the best operators in Arknights in the current meta. They are overpowered and pretty much good at clearing any content. You should invest in these characters as soon as possible.", gambar: "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/429b6b9b-c1b3-4e54-74d1-dc51e5c23100/width=1200/429b6b9b-c1b3-4e54-74d1-dc51e5c23100.jpeg", tier: "0"),
-    OperatorTierlistSelection(deskripsi: "These are also excellent Arknights characters. While not as powerful as the S-tier ones, they are still able to clear most content easily.", gambar: "https://images.alphacoders.com/128/1289111.jpg", tier: "1"),
-    OperatorTierlistSelection(deskripsi: "Not great, not bad also. Play with them only if you don’t have anything else to substitute within your team.", gambar: "https://i.pinimg.com/736x/c2/7d/3e/c27d3e5ee644f6900d6f87e5fbf47a76.jpg", tier: "2"),
-    OperatorTierlistSelection(deskripsi: "Not really worth investing in these Arknights heroes, unless you literally have nothing else, and even then you should save your resources for other characters.", gambar: "https://images.alphacoders.com/128/1287199.jpg", tier: "3"),
+    OperatorTierlistSelection(
+        deskripsi:
+            "These are the best operators in Arknights in the current meta. They are overpowered and pretty much good at clearing any content. You should invest in these characters as soon as possible.",
+        gambar:
+            "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/429b6b9b-c1b3-4e54-74d1-dc51e5c23100/width=1200/429b6b9b-c1b3-4e54-74d1-dc51e5c23100.jpeg",
+        tier: "0"),
+    OperatorTierlistSelection(
+        deskripsi:
+            "These are also excellent Arknights characters. While not as powerful as the S-tier ones, they are still able to clear most content easily.",
+        gambar: "https://images.alphacoders.com/128/1289111.jpg",
+        tier: "1"),
+    OperatorTierlistSelection(
+        deskripsi:
+            "Not great, not bad also. Play with them only if you don’t have anything else to substitute within your team.",
+        gambar:
+            "https://i.pinimg.com/736x/c2/7d/3e/c27d3e5ee644f6900d6f87e5fbf47a76.jpg",
+        tier: "2"),
+    OperatorTierlistSelection(
+        deskripsi:
+            "Not really worth investing in these Arknights heroes, unless you literally have nothing else, and even then you should save your resources for other characters.",
+        gambar: "https://images.alphacoders.com/128/1287199.jpg",
+        tier: "3"),
+  ];
+
+  List<MaterialSelection> materialselection = [
+    MaterialSelection(
+        deskripsi: "Material Tier 1 ini sangat mudah untuk didapatkan",
+        gambar: [
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/30.png",
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/29.png",
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/28.png",
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/27.png"
+        ],
+        tier: "Tier 1"),
+    MaterialSelection(
+        deskripsi: "Material Tier 2 ini masih tergolong mudah untuk didapatkan",
+        gambar: [
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/24.png",
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/23.png",
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/22.png",
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/21.png"
+        ],
+        tier: "Tier 2"),
+    MaterialSelection(
+        deskripsi:
+            "Material Tier 3 ini sudah tergolong susah untuk didapatkan melalui stage kecuali pada stage event atau stage atas",
+        gambar: [
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/63.png",
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/31.png",
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/61.png",
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/34.png"
+        ],
+        tier: "Tier 3"),
+    MaterialSelection(
+        deskripsi:
+            "Material Tier 4 ini hampir mustahil untuk didapatkan melalui stage biasa,craft menjadi solusi untuk mendapatkan material ini mudah",
+        gambar: [
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/64.png",
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/62.png",
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/7.png",
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/6.png"
+        ],
+        tier: "Tier 4"),
+    MaterialSelection(
+        deskripsi:
+            "Material Tier 5 ini hanya bisa didapatkan melalui craft saja",
+        gambar: [
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/0.png",
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/1.png",
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/2.png",
+          "https://raw.githubusercontent.com/Aceship/Arknight-Images/main/material/65.png"
+        ],
+        tier: "Tier 5")
   ];
 }
