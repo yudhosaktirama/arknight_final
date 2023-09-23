@@ -144,4 +144,52 @@ class ListItem {
         ],
         tier: "5")
   ];
+
+  List<BaseSkillListSelection> baseSkillListSelection = [
+    BaseSkillListSelection(
+        gambar:
+            "https://static.wikia.nocookie.net/mrfz/images/1/12/RIIC_Control_Center.png/revision/latest?cb=20200409150858",
+        judul: "Control Center",
+        nomorid: "0"),
+    BaseSkillListSelection(
+        gambar:
+            "https://static.wikia.nocookie.net/mrfz/images/5/54/RIIC_Power_Plant.png/revision/latest?cb=20200410035357",
+        judul: "Power Plant",
+        nomorid: "1"),
+    BaseSkillListSelection(
+        gambar:
+            "https://static.wikia.nocookie.net/mrfz/images/6/62/RIIC_Trading_Post.png/revision/latest?cb=20200509235659",
+        judul: "Trading Post",
+        nomorid: "2"),
+    BaseSkillListSelection(
+        gambar:
+            "https://static.wikia.nocookie.net/mrfz/images/9/93/RIIC_Dormitory.png/revision/latest?cb=20200409183312",
+        judul: "Dormitory",
+        nomorid: "3"),
+    BaseSkillListSelection(
+        gambar:
+            "https://static.wikia.nocookie.net/mrfz/images/0/0f/RIIC_Training_Room.png/revision/latest?cb=20200510133214",
+        judul: "Training Room",
+        nomorid: "4"),
+    BaseSkillListSelection(
+        gambar:
+            "https://static.wikia.nocookie.net/mrfz/images/a/a2/RIIC_Workshop.png/revision/latest?cb=20200409100957",
+        judul: "Workshop",
+        nomorid: "5"),
+    BaseSkillListSelection(
+        gambar:
+            "https://static.wikia.nocookie.net/mrfz/images/5/56/RIIC_Factory.png/revision/latest?cb=20200509221005",
+        judul: "Factory",
+        nomorid: "6"),
+    BaseSkillListSelection(
+        gambar:
+            "https://static.wikia.nocookie.net/mrfz/images/4/48/RIIC_Reception_Room.png/revision/latest?cb=20200510000141",
+        judul: "Reception Room",
+        nomorid: "7"),
+    BaseSkillListSelection(
+        gambar:
+            "https://img.gamewith.net/article/thumbnail/rectangle/15197.png",
+        judul: "Office",
+        nomorid: "8"),
+  ];
 }

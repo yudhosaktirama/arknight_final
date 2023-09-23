@@ -80,8 +80,16 @@ class MaterialSelection {
   List<String> gambar;
   String deskripsi;
 
-  MaterialSelection({
-    required this.deskripsi,required this.gambar,
-    required this.tier
+  MaterialSelection(
+      {required this.deskripsi, required this.gambar, required this.tier});
+}
+
+class BaseSkillListSelection {
+  String nomorid;
+  String judul;
+  String gambar;
+
+  BaseSkillListSelection({
+    required this.gambar, required this.judul,required this.nomorid
   });
 }

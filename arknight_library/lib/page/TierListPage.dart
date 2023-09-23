@@ -168,7 +168,7 @@ class OperatorTierListWidget extends StatelessWidget {
             children: [
               Expanded(
                   child: Container(
-                color: Colors.black,
+                color: Color.fromRGBO(38, 33, 33, 1),
                 child: GridView.builder(
                   addAutomaticKeepAlives: false,
                   primary: false,
@@ -183,7 +183,7 @@ class OperatorTierListWidget extends StatelessWidget {
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.23,
                         height: MediaQuery.of(context).size.height * 0.4,
-                        color: Color.fromRGBO(98, 116, 156, 1),
+                        color: Colors.black,
                         child: Column(
                           children: [
                             Container(
@@ -210,7 +210,7 @@ class OperatorTierListWidget extends StatelessWidget {
                             Container(
                               width: MediaQuery.of(context).size.width * 0.3,
                               height: MediaQuery.of(context).size.height * 0.03,
-                              color: Color.fromRGBO(98, 116, 156, 1),
+                              color: Colors.black,
                               child: Center(
                                 child: SingleChildScrollView(
                                   scrollDirection: Axis.horizontal,
@@ -224,7 +224,7 @@ class OperatorTierListWidget extends StatelessWidget {
                             Container(
                               width: MediaQuery.of(context).size.width * 0.3,
                               height: MediaQuery.of(context).size.height * 0.03,
-                              color: Color.fromRGBO(98, 116, 156, 1),
+                              color: Colors.black,
                               child: Center(
                                 child: SingleChildScrollView(
                                   scrollDirection: Axis.horizontal,
