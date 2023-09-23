@@ -75,7 +75,7 @@ class TierListPage extends StatelessWidget {
                                 ),
                                 Container(
                                   width:
-                                      MediaQuery.of(context).size.width * 0.53,
+                                      MediaQuery.of(context).size.width * 0.52,
                                   height:
                                       MediaQuery.of(context).size.height * 0.23,
                                   child: Padding(

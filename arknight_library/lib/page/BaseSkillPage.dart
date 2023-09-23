@@ -1,61 +1,53 @@
-import 'package:arknight_library/page/EventCNLIstPage.dart';
-import 'package:arknight_library/widget/DoubleTitleIconWidget.dart';
-import 'package:arknight_library/widget/ProfileWidget.dart';
 import 'package:flutter/material.dart';
-
-import '../widget/RIICBaseSkillTemplateWidget.dart';
 
 // ignore: must_be_immutable
 class BaseSkillPage extends StatelessWidget {
   BaseSkillPage({super.key});
-
-  String coba =
-      "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by +0.05 per hour.";
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          centerTitle: true,
+          title: Text("Base Skill List"),
+          leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(Icons.arrow_back_ios)),
+        ),
         backgroundColor: Color.fromRGBO(38, 33, 33, 1),
-        body: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            children: [
-              SpacingWidget(),
-              ProfileWidget(),
-              SpacingWidget(),
-              DoubleIconAndTitleWidget(
-                  gambar: "assets/parmanix.png", judul: "RIIC Base Skill List"),
-              SpacingWidget(),
-              RIICBaseSkillTemplateWidget(
-                  judul: "Control Center Skill", coba: coba),
-              SpacingWidget(),
-              RIICBaseSkillTemplateWidget(
-                  judul: "Control Center Skill", coba: coba),
-              SpacingWidget(),
-              RIICBaseSkillTemplateWidget(
-                  judul: "Control Center Skill", coba: coba),
-              SpacingWidget(),
-              RIICBaseSkillTemplateWidget(
-                  judul: "Control Center Skill", coba: coba),
-              SpacingWidget(),
-              RIICBaseSkillTemplateWidget(
-                  judul: "Control Center Skill", coba: coba),
-              SpacingWidget(),
-              RIICBaseSkillTemplateWidget(
-                  judul: "Control Center Skill", coba: coba),
-              SpacingWidget(),
-              RIICBaseSkillTemplateWidget(
-                  judul: "Control Center Skill", coba: coba),
-              SpacingWidget(),
-              RIICBaseSkillTemplateWidget(
-                  judul: "Control Center Skill", coba: coba),
-              SpacingWidget(),
-              RIICBaseSkillTemplateWidget(
-                  judul: "Control Center Skill", coba: coba),
-              SpacingWidget(),
-            ],
+        body: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: ListView.builder(
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * 0.3,
+                  color: Colors.black,
+                  child: Column(
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.height * 0.05,
+                        color: Colors.white,
+                        child: Center(
+                          child: Text("Control Center Skill",style: TextStyle(
+                            fontSize: 20
+                          ),),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              );
+            },
           ),
         ),
       ),
