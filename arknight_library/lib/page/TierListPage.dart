@@ -1,6 +1,7 @@
 import 'package:arknight_library/model/listmodel.dart';
 import 'package:arknight_library/page/OperatorDetail.dart';
 import 'package:arknight_library/page/tierlistPage/OperatorTierlistDetail.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class TierListPage extends StatelessWidget {
@@ -68,7 +69,7 @@ class TierListPage extends StatelessWidget {
                                       MediaQuery.of(context).size.height * 0.23,
                                   decoration: BoxDecoration(
                                       image: DecorationImage(
-                                          image: NetworkImage(ListItem()
+                                          image: CachedNetworkImageProvider(ListItem()
                                               .operatorTierListSelection[index]
                                               .gambar),
                                           fit: BoxFit.fill)),

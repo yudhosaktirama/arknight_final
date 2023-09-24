@@ -1,5 +1,6 @@
 import 'package:arknight_library/model/listmodel.dart';
 import 'package:arknight_library/page/baseSkillListPage/BaseSkillListDetailPage.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -56,7 +57,7 @@ class BaseSkillPage extends StatelessWidget {
                         height: MediaQuery.of(context).size.height * 0.2,
                         decoration: BoxDecoration(
                             image: DecorationImage(
-                                image: NetworkImage(ListItem()
+                                image: CachedNetworkImageProvider(ListItem()
                                     .baseSkillListSelection[index]
                                     .gambar),
                                 fit: BoxFit.fill)),
