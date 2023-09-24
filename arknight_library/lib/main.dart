@@ -55,8 +55,12 @@ class MyApp extends StatelessWidget {
                         color: Colors.white,
                       ))
                 ],
-                unselectedLabelStyle: TextStyle(color: Colors.white),
+                unselectedLabelStyle:
+                    TextStyle(color: Colors.white, fontSize: 12),
                 unselectedItemColor: Colors.white,
+                selectedLabelStyle: TextStyle(fontSize: 13),
+                selectedIconTheme: IconThemeData(
+                    size: MediaQuery.of(context).size.height * 0.04),
                 currentIndex: valueku.index,
                 onTap: (value) {
                   valueku.setIndex(value);
