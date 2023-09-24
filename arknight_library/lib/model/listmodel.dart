@@ -192,4 +192,6 @@ class ListItem {
         judul: "Office",
         nomorid: "8"),
   ];
+
+  String profil = "Nama : Yudho Sakti Rama Sultan Alfaridzi\n\nTTL : Madiun,23 Agustus 2003\n\nHobi : Bermain Game";
 }

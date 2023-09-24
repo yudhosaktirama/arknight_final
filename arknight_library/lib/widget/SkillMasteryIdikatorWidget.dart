@@ -16,7 +16,7 @@ class SkillMasteryIndikatorWidget extends StatelessWidget {
         Container(
           width: MediaQuery.of(context).size.width * 0.30,
           height: MediaQuery.of(context).size.height * 0.03,
-          color: Colors.grey,
+          color: Colors.black,
           child: Center(
             child: Text(
               judulMastery,

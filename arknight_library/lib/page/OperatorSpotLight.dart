@@ -1,6 +1,4 @@
 import 'package:arknight_library/page/OperatorDetail.dart';
-import 'package:arknight_library/widget/DoubleTitleIconWidget.dart';
-import 'package:arknight_library/widget/ProfileWidget.dart';
 import 'package:flutter/material.dart';
 
 import '../widget/OperatorClassAndArchytype.dart';

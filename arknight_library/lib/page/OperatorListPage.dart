@@ -1,5 +1,4 @@
 import 'package:arknight_library/model/listmodel.dart';
-import 'package:arknight_library/page/EventCNLIstPage.dart';
 import 'package:arknight_library/page/OperatorPage/CasterPage.dart';
 import 'package:arknight_library/page/OperatorPage/DefenderPage.dart';
 import 'package:arknight_library/page/OperatorPage/GuardPage.dart';
@@ -8,7 +7,6 @@ import 'package:arknight_library/page/OperatorPage/SniperPage.dart';
 import 'package:arknight_library/page/OperatorPage/SpecialistPage.dart';
 import 'package:arknight_library/page/OperatorPage/SupporterPage.dart';
 import 'package:arknight_library/page/OperatorPage/VanguardPage.dart';
-import 'package:arknight_library/widget/DoubleTitleIconWidget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 

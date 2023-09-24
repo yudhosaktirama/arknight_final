@@ -38,3 +38,18 @@ class FeatureEnemyState extends ChangeNotifier {
     notifyListeners();
   }
 }
+
+class AnimasiKontainer extends ChangeNotifier {
+  bool kondisiawal = true;
+  bool kondisiawalSumberData = true;
+
+  void setKondisi() {
+    kondisiawal = !kondisiawal;
+    notifyListeners();
+  }
+
+  void setKondisiSumberData() {
+    kondisiawalSumberData = !kondisiawalSumberData;
+    notifyListeners();
+  }
+}
